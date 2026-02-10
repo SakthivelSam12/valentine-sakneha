@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Happy Valentine’s Day ❤️</title>
+  <title>For Neha ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -13,114 +13,191 @@
 
     body {
       margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #ff5f6d, #ffc371);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      color: #fff;
-      text-align: center;
+      background: linear-gradient(180deg, #ffdde1, #ee9ca7);
+      color: #3a3a3a;
+      line-height: 1.7;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-      max-width: 400px;
-      animation: fadeIn 1.5s ease;
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #8b1e3f;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 10px;
     }
 
-    p {
-      font-size: 1.1rem;
+    h2 {
+      font-size: 2rem;
       margin-bottom: 30px;
     }
 
-    button {
-      background: #fff;
-      color: #ff4b5c;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
+    .hero {
+      text-align: center;
+      padding-top: 120px;
     }
 
-    button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    .hero p {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #5a2a3c;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .story p,
+    .promise p,
+    .closing p {
+      font-size: 1.05rem;
+    }
+
+    .meanings {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .meaning {
+      background: rgba(255,255,255,0.85);
+      padding: 25px;
+      border-radius: 15px;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #5a2a3c;
+      font-size: 1.1rem;
     }
 
     .heart {
-      position: absolute;
-      font-size: 20px;
-      animation: floatUp 4s linear infinite;
-      opacity: 0.8;
+      position: fixed;
+      bottom: -20px;
+      font-size: 18px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.6;
     }
 
     @keyframes floatUp {
-      0% {
-        transform: translateY(100vh) scale(0.5);
-        opacity: 0;
-      }
-      20% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-10vh) scale(1.2);
-        opacity: 0;
-      }
-    }
-
-    @keyframes fadeIn {
       from {
+        transform: translateY(0);
         opacity: 0;
-        transform: translateY(20px);
       }
       to {
+        transform: translateY(-120vh);
         opacity: 1;
-        transform: translateY(0);
       }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="card">
-    <h1>Happy Valentine’s Day ❤️</h1>
+  <!-- ❤️ Hero Section -->
+  <section class="hero">
+    <h1>For Neha ❤️</h1>
+    <p>Not perfect days. Not easy paths. Just real love.</p>
+    <p>Built in silence. Held with patience.</p>
+  </section>
+
+  <!-- 📖 Our Story -->
+  <section class="story">
+    <h2>Our Story</h2>
+    <div class="card">
+      <p>
+        We didn’t choose the easy way.<br>
+        We chose each other even when things became heavy, confusing, and painful.
+      </p>
+      <p>
+        There were days when outside voices tried to shake what we built,
+        moments that hurt you deeply,
+        moments where silence felt louder than words.
+      </p>
+      <p>
+        But through all of that, one thing stayed the same —
+        <strong>we didn’t give up on us.</strong>
+      </p>
+      <p>
+        I saw your strength when you were broken.<br>
+        I saw your patience when you could have walked away.<br>
+        And every time, you chose love over fear.
+      </p>
+    </div>
+  </section>
+
+  <!-- 🌷 What You Mean to Me -->
+  <section>
+    <h2>What You Mean to Me</h2>
+    <div class="meanings">
+      <div class="meaning">You are my calm in chaos.</div>
+      <div class="meaning">You make simple moments feel safe.</div>
+      <div class="meaning">With you, I don’t feel rushed — I feel peaceful.</div>
+      <div class="meaning">When you are with me, I feel complete, not alone.</div>
+    </div>
+
+    <div class="card" style="margin-top:40px;">
+      <p>
+        When you’re with me, the world feels quieter.<br>
+        I don’t need to pretend, prove, or protect myself.<br>
+        I just feel… <strong>at home.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- 🤍 The Promise -->
+  <section class="promise">
+    <h2>The Promise</h2>
+    <div class="card">
+      <p>This Valentine’s Day, I don’t promise perfection.</p>
+      <p>I promise patience.</p>
+      <p>I promise to protect your peace when the world gets noisy.</p>
+      <p>
+        I promise to stand with you —
+        quietly, firmly, and honestly.
+      </p>
+      <p>No matter how long the road is.</p>
+      <p>
+        Right now, your dreams matter more than timelines.<br>
+        I’ll walk with you at your pace.
+      </p>
+    </div>
+  </section>
+
+  <!-- 🌙 Closing Note -->
+  <footer class="closing">
     <p>
-      Every moment with you feels like poetry written in heartbeats.
+      Happy Valentine’s Day, Neha ❤️<br>
+      This page is small, but what I feel for you is steady, real, and growing.<br>
+      <strong>Always with you.</strong>
     </p>
-    <button onclick="showLove()">Click for a Surprise 💝</button>
-  </div>
+  </footer>
 
   <script>
-    function showLove() {
-      alert("You are my favorite notification every day 💌");
-    }
-
-    const hearts = ["❤️", "💖", "💘", "💕", "💓"];
-
+    const hearts = ["❤️", "💖", "💗"];
     setInterval(() => {
       const heart = document.createElement("div");
       heart.className = "heart";
       heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
       heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+      heart.style.animationDuration = 4 + Math.random() * 3 + "s";
       document.body.appendChild(heart);
 
-      setTimeout(() => {
-        heart.remove();
-      }, 6000);
-    }, 300);
+      setTimeout(() => heart.remove(), 7000);
+    }, 400);
   </script>
 
 </body>
