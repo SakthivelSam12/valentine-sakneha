@@ -5,10 +5,14 @@
   <title>For Neha ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- 🌸 Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
     }
 
     body {
@@ -17,6 +21,8 @@
       color: #3a3a3a;
       line-height: 1.8;
       overflow-x: hidden;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
     }
 
     section {
@@ -28,6 +34,8 @@
     h1, h2 {
       text-align: center;
       color: #8b1e3f;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 0.5px;
     }
 
     h1 {
@@ -46,17 +54,21 @@
     }
 
     .hero p {
-      font-size: 1.2rem;
       font-style: italic;
+      font-size: 1.25rem;
       color: #5a2a3c;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.85);
       border-radius: 20px;
       padding: 40px;
       box-shadow: 0 15px 30px rgba(0,0,0,0.15);
       margin-top: 30px;
+    }
+
+    .card p {
+      font-size: 1.2rem;
     }
 
     .meanings {
@@ -71,6 +83,7 @@
       padding: 25px;
       border-radius: 15px;
       font-style: italic;
+      font-size: 1.15rem;
     }
 
     .surprise-btn {
@@ -81,7 +94,9 @@
       color: #fff;
       border: none;
       border-radius: 30px;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.5px;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -114,14 +129,15 @@
     .gallery-card p {
       padding: 15px;
       font-style: italic;
-      color: #5a2a3c;
       text-align: center;
+      font-size: 1.1rem;
     }
 
     footer {
       text-align: center;
       padding: 50px 20px;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      font-family: 'Playfair Display', serif;
       color: #5a2a3c;
     }
 
@@ -145,7 +161,7 @@
     }
 
     .modal-content p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #5a2a3c;
     }
 
@@ -153,7 +169,8 @@
       margin-top: 20px;
       background: transparent;
       border: none;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
       cursor: pointer;
       color: #8b1e3f;
     }
@@ -167,7 +184,11 @@
     }
 
     section:nth-last-of-type(2) .card {
-    background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    strong, em {
+      font-weight: 500;
     }
 
     @keyframes floatUp {
@@ -196,19 +217,13 @@
     <h2>Our Story</h2>
     <div class="card">
       <p>We didn’t choose the easy way.</p>
-      <p>
-        We chose each other even when things became heavy,
-        confusing, and painful.
-      </p>
+      <p>We chose each other even when things became heavy, confusing, and painful.</p>
       <p>
         There were days when outside voices tried to shake what we built,
         moments that hurt you deeply,
         moments where silence felt louder than words.
       </p>
-      <p>
-        But through all of that, one thing stayed the same —
-        <strong>we didn’t give up on us.</strong>
-      </p>
+      <p><strong>We didn’t give up on us.</strong></p>
       <p>
         I saw your strength when you were broken.<br>
         I saw your patience when you could have walked away.<br>
@@ -216,9 +231,7 @@
       </p>
     </div>
 
-    <button class="surprise-btn" onclick="openModal('m1')">
-      A Quiet Truth 💗
-    </button>
+    <button class="surprise-btn" onclick="openModal('m1')">A Quiet Truth 💗</button>
   </section>
 
   <!-- 🌷 What You Mean -->
@@ -240,12 +253,10 @@
       </p>
     </div>
 
-    <button class="surprise-btn" onclick="openModal('m2')">
-      Another Little Surprise 🌙
-    </button>
+    <button class="surprise-btn" onclick="openModal('m2')">Another Little Surprise 🌙</button>
   </section>
 
-  <!-- 🖼️ Images + Quotes -->
+  <!-- 🖼️ Images -->
   <section>
     <h2>Little Moments</h2>
 
@@ -254,12 +265,10 @@
         <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
         <p>Some moments don’t need pictures.</p>
       </div>
-
       <div class="gallery-card">
         <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
         <p>With you, silence feels understood.</p>
       </div>
-
       <div class="gallery-card">
         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
         <p>We’re not rushing anything.</p>
@@ -274,84 +283,41 @@
       <p>I don’t promise perfection.</p>
       <p>I promise patience.</p>
       <p>I promise to protect your peace.</p>
-      <p>
-        I promise to stand with you —
-        quietly, firmly, honestly.
-      </p>
-      <p>
-        Right now, your dreams matter more than timelines.<br>
-        I’ll walk with you at your pace.
-      </p>
+      <p>I promise to stand with you — quietly, firmly, honestly.</p>
+      <p>Your dreams matter more than timelines. I’ll walk with you at your pace.</p>
     </div>
 
-    <button class="surprise-btn" onclick="openModal('m3')">
-      One Last Thing ❤️
-    </button>
+    <button class="surprise-btn" onclick="openModal('m3')">One Last Thing ❤️</button>
   </section>
 
   <!-- 💌 Why This Valentine’s Day Matters -->
-<section>
-  <h2>Why This Valentine’s Day Matters</h2>
-
-  <div class="card">
-    <p><strong>Happy Valentine’s Day, Neha ❤️</strong></p>
-
-    <p>
-      This page is my way of saying —
-      <br>
-      I see you, I respect you, and I choose you.
-    </p>
-
-    <p>
-      This month, I may not have much money to buy a Valentine’s gift,
-      because we chose something important for life
-      and took a step forward together.
-    </p>
-
-    <p>
-      But I want you to know this —
-      even when I don’t have gifts to give,
-      I will always give you my time,
-      my presence,
-      and my effort to make you happy.
-    </p>
-
-    <p>
-      That’s why this Valentine’s Day —
-      <strong>14/02/2026</strong> —
-      I chose the simplest and most honest thing:
-      <br>
-      <strong>to come and see you.</strong>
-    </p>
-
-    <p>
-      And this one is special, because
-      <br>
-      this is our <strong>3rd Valentine’s together</strong> —
-      not loud,
-      not perfect,
-      but real, steady, and growing.
-    </p>
-
-    <p>
-  I still smile when I think about the way I used to call you
-  <strong>pondatti</strong>.
-  <br>
-  Not as a habit.
-  <br>
-  But as a feeling —
-  of closeness, comfort, and belonging.
-    </p>
-
-
-    <p style="text-align:center; margin-top:30px; font-style:italic;">
-      Not loudly.<br>
-      Not blindly.<br>
-      <strong>But honestly.</strong>
-    </p>
-  </div>
-</section>
-
+  <section>
+    <h2>Why This Valentine’s Day Matters</h2>
+    <div class="card">
+      <p><strong>Happy Valentine’s Day, Neha ❤️</strong></p>
+      <p>I see you, I respect you, and I choose you.</p>
+      <p>
+        Even when I don’t have gifts to give,
+        I will always give you my time, my presence, and my effort.
+      </p>
+      <p>
+        This is our <strong>3rd Valentine’s</strong> —
+        not loud, not perfect,
+        but real and growing.
+      </p>
+      <p>
+        I still smile when I think about the way I used to call you
+        <em>pondatti</em>.
+        <br>
+        Not a habit — a feeling of belonging.
+      </p>
+      <p style="text-align:center; font-style:italic;">
+        Not loudly.<br>
+        Not blindly.<br>
+        <strong>But honestly.</strong>
+      </p>
+    </div>
+  </section>
 
   <!-- 🌙 Closing -->
   <footer>
