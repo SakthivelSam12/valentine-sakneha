@@ -500,23 +500,6 @@
 <body>
 
 <!-- 🔐 Elegant Lock Screen -->
-<!-- <div class="lock-screen" id="lockScreen">
-  <div class="lock-card">
-    <div class="lock-icon">🔒</div>
-    <h3>Enter the word I call you</h3>
-
-    <input 
-      type="password" 
-      id="passwordInput" 
-      placeholder="Type here..."
-      autocomplete="off"
-    >
-
-    <button onclick="checkPassword()">Open</button>
-    <p class="lock-hint">Only one word unlocks this.</p>
-  </div>
-</div> -->
-
 <div class="lock-screen" id="lockScreen">
 <div class="lock-card">
   <div class="lock-icon heart-icon">❤️</div>
@@ -746,6 +729,20 @@
 </section>
 
 
+<section class="reveal">
+  <p style="
+    text-align:center;
+    font-family: 'Sacramento', cursive;
+    font-size: 2.4rem;
+    color: #7a1830;
+    margin-top: 40px;
+  ">
+    I love you di pondatti❤️.
+  </p>
+</section>
+
+
+
 <!-- 🌙 Closing -->
 <footer>
   <div class="emotion-text reveal">
@@ -765,28 +762,6 @@
     document.body.appendChild(h);
     setTimeout(() => h.remove(), 7000);
   }, 400);
-
-
-// function checkPassword() {
-//   const input = document.getElementById("passwordInput").value.trim().toLowerCase();
-//   const card = document.querySelector(".lock-card");
-//   const screen = document.getElementById("lockScreen");
-
-//   if (input === "pondatti") {
-//     card.classList.add("unlock-glow");
-
-//     setTimeout(() => {
-//       screen.classList.add("fade-out");
-//     }, 600);
-//   } else {
-//     card.classList.add("shake");
-
-//     setTimeout(() => {
-//       card.classList.remove("shake");
-//       alert("That’s not the word I use ❤️");
-//     }, 350);
-//   }
-// }
 
 
 function checkPassword() {
