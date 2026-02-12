@@ -5,24 +5,21 @@
   <title>For Neha ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 🌸 Elegant Google Fonts -->
+  <!-- 🌸 Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Libre+Baskerville:wght@400;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Libre+Baskerville:wght@400;700&family=Poppins:wght@400;500&family=Sacramento&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       background: linear-gradient(180deg, #ffdde1, #ee9ca7);
       color: #2f2f2f;
+      font-family: 'Libre Baskerville', serif;
       line-height: 1.9;
       overflow-x: hidden;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.1rem;
     }
 
     section {
@@ -33,20 +30,13 @@
 
     h1, h2 {
       text-align: center;
-      color: #7a1830;
       font-family: 'Cinzel', serif;
+      color: #7a1830;
       letter-spacing: 1px;
     }
 
-    h1 {
-      font-size: 3.2rem;
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      font-size: 2.1rem;
-      margin-bottom: 35px;
-    }
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 2.1rem; margin-bottom: 35px; }
 
     .hero {
       text-align: center;
@@ -54,26 +44,22 @@
     }
 
     .hero p {
-      font-size: 1.3rem;
       font-style: italic;
+      font-size: 1.3rem;
       color: #5a2434;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255,255,255,0.9);
       border-radius: 22px;
       padding: 45px;
       box-shadow: 0 18px 35px rgba(0,0,0,0.18);
       margin-top: 35px;
     }
 
-    .card p {
-      font-size: 1.15rem;
-    }
-
     .meanings {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
       gap: 22px;
       text-align: center;
     }
@@ -83,34 +69,74 @@
       padding: 28px;
       border-radius: 18px;
       font-style: italic;
-      font-size: 1.1rem;
     }
 
-    .surprise-btn {
-      display: block;
-      margin: 45px auto;
-      padding: 15px 34px;
-      background: #7a1830;
-      color: #fff;
-      border: none;
-      border-radius: 40px;
-      font-size: 0.95rem;
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: 1px;
+    /* 💌 Flip Cards */
+    .flip-section {
+      background: rgba(255,255,255,0.6);
+      border-radius: 30px;
+      padding: 60px 30px;
+    }
+
+    .flip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 30px;
+      perspective: 1000px;
+    }
+
+    .flip-card {
+      height: 260px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
       cursor: pointer;
-      transition: transform 0.25s, box-shadow 0.25s;
     }
 
-    .surprise-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
     }
 
+    .flip-front, .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .flip-front {
+      background: #fff;
+      font-family: 'Cinzel', serif;
+      color: #7a1830;
+      font-size: 1.3rem;
+    }
+
+    .flip-back {
+      background: #fffafc;
+      transform: rotateY(180deg);
+      font-family: 'Sacramento', cursive;
+      font-size: 1.4rem;
+      color: #5a2434;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* 🖼️ Gallery */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
       gap: 30px;
-      margin-top: 45px;
     }
 
     .gallery-card {
@@ -128,54 +154,19 @@
 
     .gallery-card p {
       padding: 18px;
-      font-style: italic;
       text-align: center;
-      font-size: 1.05rem;
+      font-style: italic;
     }
 
     footer {
       text-align: center;
       padding: 60px 20px;
-      font-size: 1.25rem;
       font-family: 'Cinzel', serif;
       color: #5a2434;
+      font-size: 1.25rem;
     }
 
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
-
-    .modal-content {
-      background: #fff;
-      padding: 45px;
-      border-radius: 22px;
-      max-width: 520px;
-      text-align: center;
-      animation: fadeIn 0.5s ease;
-    }
-
-    .modal-content p {
-      font-size: 1.15rem;
-      color: #5a2434;
-    }
-
-    .close {
-      margin-top: 25px;
-      background: transparent;
-      border: none;
-      font-size: 0.95rem;
-      font-family: 'Poppins', sans-serif;
-      cursor: pointer;
-      color: #7a1830;
-      letter-spacing: 1px;
-    }
-
+    /* ❤️ Hearts */
     .heart {
       position: fixed;
       bottom: -20px;
@@ -184,193 +175,126 @@
       opacity: 0.6;
     }
 
-    section:nth-last-of-type(2) .card {
-      background: rgba(255, 255, 255, 0.97);
-    }
-
-    strong, em {
-      font-weight: 700;
-    }
-
     @keyframes floatUp {
       from { transform: translateY(0); opacity: 0; }
       to { transform: translateY(-120vh); opacity: 1; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- ❤️ Hero -->
-  <section class="hero">
-    <h1>For Neha ❤️</h1>
-    <p>Not perfect days. Not easy paths. Just real love.</p>
-    <p>Built in silence. Held with patience.</p>
-  </section>
+<section class="hero">
+  <h1>For Neha ❤️</h1>
+  <p>Not perfect days. Not easy paths. Just real love.</p>
+  <p>Built in silence. Held with patience.</p>
+</section>
 
-  <!-- 📖 Our Story -->
-  <section>
-    <h2>Our Story</h2>
-    <div class="card">
-      <p>We didn’t choose the easy way.</p>
-      <p>We chose each other even when things became heavy, confusing, and painful.</p>
-      <p>
-        There were days when outside voices tried to shake what we built,
-        moments that hurt you deeply,
-        moments where silence felt louder than words.
-      </p>
-      <p><strong>We didn’t give up on us.</strong></p>
-      <p>
-        I saw your strength when you were broken.<br>
-        I saw your patience when you could have walked away.<br>
-        And every time, you chose love over fear.
-      </p>
-    </div>
+<section>
+  <h2>What You Mean to Me</h2>
 
-    <button class="surprise-btn" onclick="openModal('m1')">A Quiet Truth 💗</button>
-  </section>
+  <div class="flip-section">
+    <div class="flip-grid">
 
-  <!-- 🌷 What You Mean -->
-  <section>
-    <h2>What You Mean to Me</h2>
-
-    <div class="meanings">
-      <div class="meaning">You are my calm in chaos.</div>
-      <div class="meaning">You make simple moments feel safe.</div>
-      <div class="meaning">With you, I don’t feel rushed.</div>
-      <div class="meaning">When you are with me, I feel complete.</div>
-    </div>
-
-    <div class="card">
-      <p>
-        When you’re with me, the world feels quieter.<br>
-        I don’t need to pretend, prove, or protect myself.<br>
-        I just feel… <strong>at home.</strong>
-      </p>
-    </div>
-
-    <button class="surprise-btn" onclick="openModal('m2')">Another Little Surprise 🌙</button>
-  </section>
-
-  <!-- 🖼️ Images -->
-  <section>
-    <h2>Little Moments</h2>
-
-    <div class="gallery">
-      <div class="gallery-card">
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
-        <p>Some moments don’t need pictures.</p>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">Myself</div>
+          <div class="flip-back">
+            When you are with me, I feel like I can truly be myself.
+            Thank you for accepting me as I am.
+          </div>
+        </div>
       </div>
-      <div class="gallery-card">
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
-        <p>With you, silence feels understood.</p>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">Trust</div>
+          <div class="flip-back">
+            I trust you, both now and in the future.
+            That trust will never change.
+          </div>
+        </div>
       </div>
-      <div class="gallery-card">
-        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
-        <p>We’re not rushing anything.</p>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">Always</div>
+          <div class="flip-back">
+            Don’t ever feel sad thinking that you have no one.
+            I will always be there for you.
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- 🤍 Promise -->
-  <section>
-    <h2>The Promise</h2>
-    <div class="card">
-      <p>I don’t promise perfection.</p>
-      <p>I promise patience.</p>
-      <p>I promise to protect your peace.</p>
-      <p>I promise to stand with you — quietly, firmly, honestly.</p>
-      <p>Your dreams matter more than timelines. I’ll walk with you at your pace.</p>
-    </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">Your Eyes</div>
+          <div class="flip-back">
+            I really love your eyes.
+            They look especially beautiful when you wear kajal.
+          </div>
+        </div>
+      </div>
 
-    <button class="surprise-btn" onclick="openModal('m3')">One Last Thing ❤️</button>
-  </section>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">Care</div>
+          <div class="flip-back">
+            I really like the things you do for me.
+          </div>
+        </div>
+      </div>
 
-  <!-- 💌 Why This Valentine’s Day Matters -->
-  <section>
-    <h2>Why This Valentine’s Day Matters</h2>
-    <div class="card">
-      <p><strong>Happy Valentine’s Day, Neha ❤️</strong></p>
-      <p>I see you, I respect you, and I choose you.</p>
-      <p>
-        Even when I don’t have gifts to give,
-        I will always give you my time, my presence, and my effort.
-      </p>
-      <p>
-        This is our <strong>3rd Valentine’s</strong> —
-        not loud, not perfect,
-        but real and growing.
-      </p>
-      <p>
-        I still smile when I think about the way I used to call you
-        <em>pondatti</em>.
-        <br>
-        Not a habit — a feeling of belonging.
-      </p>
-      <p style="text-align:center; font-style:italic;">
-        Not loudly.<br>
-        Not blindly.<br>
-        <strong>But honestly.</strong>
-      </p>
-    </div>
-  </section>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">My Life</div>
+          <div class="flip-back">
+            If you had not come into my life,
+            it would not have been meaningful.
+            You motivate me to move forward.
+          </div>
+        </div>
+      </div>
 
-  <!-- 🌙 Closing -->
-  <footer>
-    <p>
-      Happy Valentine’s Day, Neha ❤️<br>
-      This page is small, but what I feel is steady and real.<br>
-      <strong>Always with you.</strong>
-    </p>
-  </footer>
-
-  <!-- 💌 Modals -->
-  <div id="m1" class="modal">
-    <div class="modal-content">
-      <p>Even on hard days, my choice doesn’t change.</p>
-      <button class="close" onclick="closeModal('m1')">Close</button>
     </div>
   </div>
+</section>
 
-  <div id="m2" class="modal">
-    <div class="modal-content">
-      <p>Loving you isn’t loud. It stays.</p>
-      <button class="close" onclick="closeModal('m2')">Close</button>
+<section>
+  <h2>Little Moments</h2>
+  <div class="gallery">
+    <div class="gallery-card">
+      <img src="images/photo1.jpg">
+      <p>Some moments don’t need pictures.</p>
+    </div>
+    <div class="gallery-card">
+      <img src="images/photo2.jpg">
+      <p>With you, silence feels understood.</p>
+    </div>
+    <div class="gallery-card">
+      <img src="images/photo3.jpg">
+      <p>We’re not rushing anything.</p>
     </div>
   </div>
+</section>
 
-  <div id="m3" class="modal">
-    <div class="modal-content">
-      <p>No matter what, you’re not alone.</p>
-      <button class="close" onclick="closeModal('m3')">Close</button>
-    </div>
-  </div>
+<footer>
+  Happy Valentine’s Day, Neha ❤️<br>
+  Always with you.
+</footer>
 
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = "flex";
-    }
-
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
-
-    const hearts = ["❤️","💖","💗"];
-    setInterval(() => {
-      const h = document.createElement("div");
-      h.className = "heart";
-      h.innerText = hearts[Math.floor(Math.random()*hearts.length)];
-      h.style.left = Math.random()*100 + "vw";
-      h.style.animationDuration = 4 + Math.random()*3 + "s";
-      document.body.appendChild(h);
-      setTimeout(() => h.remove(), 7000);
-    }, 400);
-  </script>
+<script>
+  const hearts = ["❤️","💖","💗"];
+  setInterval(() => {
+    const h = document.createElement("div");
+    h.className = "heart";
+    h.innerText = hearts[Math.floor(Math.random()*hearts.length)];
+    h.style.left = Math.random()*100 + "vw";
+    h.style.animationDuration = 4 + Math.random()*3 + "s";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 7000);
+  }, 400);
+</script>
 
 </body>
 </html>
