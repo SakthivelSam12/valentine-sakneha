@@ -281,6 +281,69 @@
   letter-spacing: 0.4px;
 }
 
+/* ✉️ Framed Letter Style */
+.letter-frame {
+  background: rgba(255,255,255,0.95);
+  padding: 60px 40px;
+  max-width: 520px;
+  margin: auto;
+  border-radius: 22px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+}
+
+.letter-frame::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1.5px solid #d8a7b1;
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+/* 🎀 Ribbon Card */
+.ribbon-card {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 60px 35px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.22);
+  position: relative;
+  text-align: center;
+}
+
+.ribbon-card::before {
+  content: "❤️";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 50%;
+}
+
+/* 🌿 Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .letter-frame {
+    padding: 45px 25px;
+  }
+}
+
+
 @keyframes fadeAway {
   to {
     opacity: 0;
@@ -315,18 +378,20 @@
 
 <!-- ❤️ Hero -->
 <section class="hero">
-  <div class="card emotion-text">
-  <h1>Happy Valentine’s Day, Neha ❤️</h1>
-  <p>Three years. One choice. Still you.</p>
-  <p>Still us. Still strong. Still growing.</p>
+  <div class="ribbon-card emotion-text reveal">
+    <h1>Happy Valentine’s Day, Neha ❤️</h1>
+    <p>Three years. One choice. Still you.</p>
+    <p>Still us. Still strong. Still growing.</p>
   </div>
 </section>
+
+
 
 <!-- 📖 Our Story -->
 <section>
   <h2>Our Story</h2>
 
-  <div class="card emotion-text">
+  <div class="card emotion-text reveal">
     <p>We didn’t choose the easy way.</p>
 
     <p>We chose each other even when things became heavy, confusing, and painful.</p>
@@ -351,7 +416,7 @@
 <section>
   <h2>What You Mean to Me</h2>
 
-  <div class="flip-section">
+  <div class="flip-section reveal">
     <div class="flip-grid">
 
       <div class="flip-card">
@@ -422,7 +487,7 @@
 <section>
   <h2>Some Special Moments</h2>
 
-  <div class="gallery-new">
+  <div class="gallery-new reveal">
 
     <div class="gallery-item">
       <img src="images/photo3.png" alt="Memory 1">
@@ -450,7 +515,7 @@
 <!-- 🤍 Promise -->
 <section>
   <h2>The Promise</h2>
-  <div class="card emotion-text">
+  <div class="card emotion-text reveal">
     <p>I may not promise perfection,</p>
     <p>but I promise patience, understanding, and effort.</p>
     <p>I promise to protect your peace and hold you steady.</p>
@@ -462,7 +527,7 @@
 <!-- 💌 Why This Valentine’s Day Matters -->
 <section>
   <h2>Why This Valentine’s Day Matters</h2>
-  <div class="card emotion-text">
+  <div class="card emotion-text reveal">
     <p><strong>Happy Valentine’s Day, Neha ❤️</strong></p>
     <p>I see you, I respect you, and I choose you.</p>
     <p>
@@ -521,10 +586,13 @@
   </div>
 </section>
 
+
 <!-- 🌙 Closing -->
 <footer>
-  Happy Valentine’s Day, Neha ❤️<br>
-  Always with you.
+  <div class="emotion-text reveal">
+  <strong>Happy Valentine’s Day, Neha ❤️</strong><br>
+  <strong>Always with you.</strong> 
+  </div>
 </footer>
 
 <script>
@@ -548,6 +616,21 @@
     alert("That’s not the word I use ❤️");
   }
 }
+
+const reveals = document.querySelectorAll(".reveal");
+
+const revealOnScroll = () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 80) {
+      el.classList.add("show");
+    }
+  });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
 
 </script>
 
