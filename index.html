@@ -49,6 +49,18 @@
       color: #5a2434;
     }
 
+    .hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
     .card {
       background: rgba(255,255,255,0.92);
       border-radius: 24px;
@@ -462,6 +474,125 @@
 }
 
 
+/* ❤️ Final Love Line */
+.love-section {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.love-text {
+  font-family: 'Sacramento', cursive;
+  font-size: 2.5rem;
+  font-weight: 600;              /* slightly bolder */
+  color: #7a1830;
+  opacity: 0;
+  transition: opacity 2s ease;   /* slow fade-in */
+}
+
+.love-text.visible {
+  opacity: 1;
+}
+
+.hero-line {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #5a2434;
+  margin: 6px 0;
+}
+
+.hero-date {
+  margin: 25px 0 10px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: #7a1830;
+  opacity: 0.8;
+}
+
+.hero-sign {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-family: 'Cinzel', serif;
+  color: #7a1830;
+}
+
+.hero-signature {
+  font-family: 'Sacramento', cursive;
+  font-size: 1.8rem;
+  color: #7a1830;
+  margin-top: 5px;
+}
+
+/* 🤍 Promise Highlights */
+.promise-highlight {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  color: #7a1830;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.promise-soft {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+  color: #5a2434;
+}
+
+/* 🌙 Footer gentle highlight pulse */
+.footer-highlight {
+  display: inline-block;
+  transition: color 0.6s ease, transform 0.6s ease;
+}
+
+@keyframes footerPulse {
+  0% {
+    color: #5a2434;
+    transform: scale(1);
+  }
+  40% {
+    color: #7a1830;
+    transform: scale(1.06);
+  }
+  100% {
+    color: #5a2434;
+    transform: scale(1);
+  }
+}
+
+.footer-pulse {
+  animation: footerPulse 1.2s ease;
+}
+
+.love-text {
+  font-family: 'Sacramento', cursive;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #7a1830;
+  opacity: 0;
+  transition: opacity 2s ease;
+  white-space: pre-line; /* 👈 important */
+}
+
+
+
+@media (max-width: 480px) {
+  .hero-line {
+    font-size: 1.1rem;
+  }
+
+  .hero-signature {
+    font-size: 1.6rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .love-text {
+    font-size: 2.2rem;
+  }
+}
+
+
 @keyframes fadeAway {
   to {
     opacity: 0;
@@ -521,11 +652,19 @@
 <!-- ❤️ Hero -->
 <section class="hero">
   <div class="emotion-text reveal">
-    <h1>For you, Neha ❤️</h1>
-    <p>Three years. One choice. Still you.</p>
-    <p>Still us. Still strong. Still growing.</p>
+    <h1>For my always, Neha ❤️</h1>
+
+    <p class="hero-line">Three years. One choice.</p>
+    <p class="hero-line">Still you. Still us.</p>
+    <p class="hero-line">Still strong. Still growing.</p>
+
+    <p class="hero-date">14 • 02 • 2026</p>
+
+    <p class="hero-sign ">Happy Valentine’s Day</p>
+    <p class="hero-signature">My love ❤️</p>
   </div>
 </section>
+
 
 
 
@@ -657,14 +796,31 @@
 <!-- 🤍 Promise -->
 <section>
   <h2>The Promise</h2>
+
   <div class="card emotion-text reveal">
     <p>I may not promise perfection,</p>
-    <p>but I promise patience, understanding, and effort.</p>
-    <p>I promise to protect your peace and hold you steady.</p>
-    <p>I promise to choose you, quietly and honestly, every single day.</p>
-    <p>Your dreams come first. I’ll walk beside you, never ahead, never behind.</p>
+
+    <p class="promise-highlight">
+      but I promise patience, understanding, and effort.
+    </p>
+
+    <p>
+      I promise to protect your peace and hold you steady.
+    </p>
+
+    <p class="promise-highlight">
+      I promise to choose you, quietly and honestly, every single day.
+    </p>
+
+    <p>
+      Your dreams come first.
+      <span class="promise-soft">
+        I’ll walk beside you, never ahead, never behind.
+      </span>
+    </p>
   </div>
 </section>
+
 
 <!-- 💌 Why This Valentine’s Day Matters -->
 <section>
@@ -714,12 +870,6 @@
       not loud, not perfect,
       but real, steady, and growing.
     </p>
-    <p>
-      I still smile when I think about the way I used to call you
-      <em>pondatti</em>.
-      <br>
-      Not a habit — a feeling of belonging.
-    </p>
     <p style="text-align:center; font-style:italic;">
       Not loudly.<br>
       Not blindly.<br>
@@ -729,27 +879,10 @@
 </section>
 
 
-<section class="reveal">
-  <p style="
-    text-align:center;
-    font-family: 'Sacramento', cursive;
-    font-size: 2.4rem;
-    color: #7a1830;
-    margin-top: 40px;
-  ">
-    I love you di pondatti❤️.
-  </p>
+<section id="loveReveal" class="love-section">
+  <p id="loveText" class="footer-highlight love-text"></p>
 </section>
 
-
-
-<!-- 🌙 Closing -->
-<footer>
-  <div class="emotion-text reveal">
-  <strong>Happy Valentine’s Day, Neha ❤️</strong><br>
-  <strong>Always with you.</strong> 
-  </div>
-</footer>
 
 <script>
   const hearts = ["❤️","💖","💗"];
@@ -809,6 +942,50 @@ document.getElementById("passwordInput")
       checkPassword();
     }
 });
+
+
+
+const loveLine = "I love you di pondatti❤️\nWith you. Always.";
+const loveTextEl = document.getElementById("loveText");
+let loveTyped = false;
+
+function typeLoveLine() {
+  let i = 0;
+  loveTextEl.textContent = "";
+  loveTextEl.classList.add("visible");
+
+  const typing = setInterval(() => {
+    loveTextEl.textContent += loveLine.charAt(i);
+    i++;
+    if (i === loveLine.length) {
+      clearInterval(typing);
+    }
+  }, 120);
+}
+
+// Trigger only after full scroll
+window.addEventListener("scroll", () => {
+  if (
+    !loveTyped &&
+    window.innerHeight + window.scrollY >= document.body.offsetHeight - 5
+  ) {
+    loveTyped = true;
+    typeLoveLine();
+  }
+});
+
+
+const footerText = document.querySelector(".footer-highlight");
+
+setInterval(() => {
+  footerText.classList.add("footer-pulse");
+
+  setTimeout(() => {
+    footerText.classList.remove("footer-pulse");
+  }, 1200);
+
+}, 3000);
+
 
 
 
