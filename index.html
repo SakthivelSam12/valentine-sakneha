@@ -423,6 +423,45 @@
   animation: fadeAway 0.8s forwards;
 }
 
+
+/* ✨ Unlock glow */
+.unlock-glow {
+  box-shadow: 0 0 40px rgba(255, 182, 193, 0.85) !important;
+  transition: box-shadow 0.4s ease;
+}
+
+/* ❌ Wrong password shake */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.shake {
+  animation: shake 0.4s;
+}
+
+
+/* ❤️ Heart Icon */
+.heart-icon {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* ❤️ Pinch animation on unlock */
+@keyframes heartPinch {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(0.85); }
+  60%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.heart-pinch {
+  animation: heartPinch 0.6s ease;
+}
+
+
 @keyframes fadeAway {
   to {
     opacity: 0;
@@ -461,7 +500,7 @@
 <body>
 
 <!-- 🔐 Elegant Lock Screen -->
-<div class="lock-screen" id="lockScreen">
+<!-- <div class="lock-screen" id="lockScreen">
   <div class="lock-card">
     <div class="lock-icon">🔒</div>
     <h3>Enter the word I call you</h3>
@@ -476,8 +515,24 @@
     <button onclick="checkPassword()">Open</button>
     <p class="lock-hint">Only one word unlocks this.</p>
   </div>
-</div>
+</div> -->
 
+<div class="lock-screen" id="lockScreen">
+<div class="lock-card">
+  <div class="lock-icon heart-icon">❤️</div>
+  <h3>Enter the word I call you</h3>
+
+  <input 
+    type="password" 
+    id="passwordInput" 
+    placeholder="Type here..."
+    autocomplete="off"
+  >
+
+  <button onclick="checkPassword()">Open</button>
+  <p class="lock-hint">Only one word unlocks this.</p>
+</div>
+</div>
 
 
 <!-- ❤️ Hero -->
@@ -712,14 +767,52 @@
   }, 400);
 
 
-  function checkPassword() {
+// function checkPassword() {
+//   const input = document.getElementById("passwordInput").value.trim().toLowerCase();
+//   const card = document.querySelector(".lock-card");
+//   const screen = document.getElementById("lockScreen");
+
+//   if (input === "pondatti") {
+//     card.classList.add("unlock-glow");
+
+//     setTimeout(() => {
+//       screen.classList.add("fade-out");
+//     }, 600);
+//   } else {
+//     card.classList.add("shake");
+
+//     setTimeout(() => {
+//       card.classList.remove("shake");
+//       alert("That’s not the word I use ❤️");
+//     }, 350);
+//   }
+// }
+
+
+function checkPassword() {
   const input = document.getElementById("passwordInput").value.trim().toLowerCase();
+  const card = document.querySelector(".lock-card");
+  const screen = document.getElementById("lockScreen");
+  const heart = document.querySelector(".heart-icon");
+
   if (input === "pondatti") {
-    document.getElementById("lockScreen").classList.add("fade-out");
+    heart.classList.add("heart-pinch");
+    card.classList.add("unlock-glow");
+
+    setTimeout(() => {
+      screen.classList.add("fade-out");
+    }, 700);
   } else {
-    alert("That’s not the word I use ❤️");
+    card.classList.add("shake");
+
+    setTimeout(() => {
+      card.classList.remove("shake");
+      alert("That’s not the word I use ❤️");
+    }, 350);
   }
 }
+
+
 
 const reveals = document.querySelectorAll(".reveal");
 
