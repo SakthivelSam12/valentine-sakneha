@@ -22,58 +22,6 @@
       overflow-x: hidden;
     }
 
-    /* 🔒 Lock Screen */
-    .lock-screen {
-      position: fixed;
-      inset: 0;
-      background: linear-gradient(180deg, #ffdde1, #ee9ca7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-
-    .lock-box {
-      background: rgba(255,255,255,0.96);
-      padding: 55px;
-      border-radius: 26px;
-      text-align: center;
-      max-width: 380px;
-      box-shadow: 0 22px 45px rgba(0,0,0,0.22);
-    }
-
-    .lock-box h2 {
-      font-family: 'Cinzel', serif;
-      color: #7a1830;
-      margin-bottom: 10px;
-    }
-
-    .lock-box p {
-      font-style: italic;
-      color: #5a2434;
-      margin-bottom: 25px;
-    }
-
-    .lock-box input {
-      width: 100%;
-      padding: 12px;
-      font-size: 1rem;
-      border-radius: 22px;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
-
-    .lock-box button {
-      margin-top: 22px;
-      padding: 12px 34px;
-      border-radius: 26px;
-      border: none;
-      background: #7a1830;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      cursor: pointer;
-    }
-
     section {
       padding: 90px 20px;
       max-width: 1000px;
@@ -109,7 +57,7 @@
       margin-top: 40px;
     }
 
-    /* Flip Cards */
+    /* 💌 Flip Cards */
     .flip-section {
       background: rgba(255,255,255,0.65);
       border-radius: 30px;
@@ -123,7 +71,9 @@
       perspective: 1000px;
     }
 
-    .flip-card { height: 280px; }
+    .flip-card {
+      height: 280px;
+    }
 
     .flip-card-inner {
       position: relative;
@@ -167,7 +117,7 @@
       line-height: 1.6;
     }
 
-    /* Gallery */
+    /* 🌸 New Elegant Gallery */
     .gallery-new {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -180,12 +130,24 @@
       overflow: hidden;
       border-radius: 30px;
       box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .gallery-item img {
       width: 100%;
       height: 520px;
       object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
     }
 
     .overlay {
@@ -208,6 +170,7 @@
       font-size: 1.3rem;
     }
 
+    /* ❤️ Floating Hearts */
     .heart {
       position: fixed;
       bottom: -20px;
@@ -216,6 +179,11 @@
       opacity: 0.6;
     }
 
+    @media (max-width: 768px) {
+  .gallery-item img {
+    height: 380px;
+     }
+    }
     @keyframes floatUp {
       from { transform: translateY(0); opacity: 0; }
       to { transform: translateY(-120vh); opacity: 1; }
@@ -224,16 +192,6 @@
 </head>
 
 <body>
-
-<!-- 🔒 Lock Screen -->
-<div class="lock-screen" id="lockScreen">
-  <div class="lock-box">
-    <h2>Just one thing…</h2>
-    <p>Enter what I used to call you</p>
-    <input type="password" id="passwordInput" placeholder="Type here">
-    <button onclick="checkPassword()">Open</button>
-  </div>
-</div>
 
 <!-- ❤️ Hero -->
 <section class="hero">
@@ -262,29 +220,98 @@
   </div>
 </section>
 
-<!-- 🌷 What You Mean -->
+<!-- 🌷 Flip Cards -->
 <section>
   <h2>What You Mean to Me</h2>
+
   <div class="flip-section">
     <div class="flip-grid">
-      <!-- flip cards unchanged -->
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">Myself</div>
+          <div class="flip-back">
+            When you are with me, I feel like I can truly be myself.
+            Thank you for accepting me as I am.
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">Trust</div>
+          <div class="flip-back">
+            I trust you, both now and in the future.
+            That trust will never change.
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">Always</div>
+          <div class="flip-back">
+            Don’t ever feel sad thinking that you have no one.
+            I will always be there for you.
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">Your Eyes</div>
+          <div class="flip-back">
+            I really love your eyes.
+            They look especially beautiful when you wear kajal.
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">Care</div>
+          <div class="flip-back">
+            I really like the things you do for me.
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">My Life</div>
+          <div class="flip-back">
+            If you had not come into my life,
+            it would not have been meaningful.
+            You motivate me to move forward.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- 🖼️ Moments -->
+<!-- 🖼️ Bigger Cinematic Gallery -->
 <section>
   <h2>Some Special Moments</h2>
+
   <div class="gallery-new">
+
     <div class="gallery-item">
-      <img src="images/photo3.png"><div class="overlay">2024</div>
+      <img src="images/photo3.png" alt="Memory 2">
+      <div class="overlay">2024</div>
     </div>
+
     <div class="gallery-item">
-      <img src="images/photo2.jpeg"><div class="overlay">2025</div>
+      <img src="images/photo2.jpeg" alt="Memory 1">
+      <div class="overlay">2025</div>
     </div>
+
     <div class="gallery-item">
-      <img src="images/photo4.png"><div class="overlay">2026</div>
+      <img src="images/photo4.png" alt="Memory 3">
+      <div class="overlay">2026</div>
     </div>
+
   </div>
 </section>
 
@@ -296,36 +323,46 @@
     <p>I promise patience.</p>
     <p>I promise to protect your peace.</p>
     <p>I promise to stand with you — quietly, firmly, honestly.</p>
+    <p>Your dreams matter more than timelines. I’ll walk with you at your pace.</p>
   </div>
 </section>
 
-<!-- 💌 Valentine -->
+<!-- 💌 Why This Valentine’s Day Matters -->
 <section>
   <h2>Why This Valentine’s Day Matters</h2>
   <div class="card">
     <p><strong>Happy Valentine’s Day, Neha ❤️</strong></p>
-    <p>I still smile when I think about the way I used to call you <em>pondatti</em>.</p>
+    <p>I see you, I respect you, and I choose you.</p>
+    <p>
+      Even when I don’t have gifts to give,
+      I will always give you my time, my presence, and my effort.
+    </p>
+    <p>
+      This is our <strong>3rd Valentine’s together</strong> —
+      not loud, not perfect,
+      but real, steady, and growing.
+    </p>
+    <p>
+      I still smile when I think about the way I used to call you
+      <em>pondatti</em>.
+      <br>
+      Not a habit — a feeling of belonging.
+    </p>
     <p style="text-align:center; font-style:italic;">
-      Not loudly.<br>Not blindly.<br><strong>But honestly.</strong>
+      Not loudly.<br>
+      Not blindly.<br>
+      <strong>But honestly.</strong>
     </p>
   </div>
 </section>
 
+<!-- 🌙 Closing -->
 <footer>
   Happy Valentine’s Day, Neha ❤️<br>
   Always with you.
 </footer>
 
 <script>
-  function checkPassword() {
-    const value = document.getElementById("passwordInput").value.toLowerCase();
-    if (value === "pondatti") {
-      document.getElementById("lockScreen").style.display = "none";
-    } else {
-      alert("That’s not it 🤍");
-    }
-  }
-
   const hearts = ["❤️","💖","💗"];
   setInterval(() => {
     const h = document.createElement("div");
