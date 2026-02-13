@@ -756,6 +756,39 @@
 }
 
 
+.name-signature {
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Sacramento', cursive;
+  font-size: 2.2rem;
+  color: #7a1830;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.name-signature span {
+  margin: 0 6px;
+  font-size: 1.8rem;
+  color: #5a2434;
+}
+
+
+.name-signature {
+  animation: nameFade 2s ease forwards;
+}
+
+@keyframes nameFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+
 
 @media (max-width: 480px) {
   .love-text {
@@ -842,7 +875,7 @@
     <div class="flip-love-inner">
 
       <!-- Front -->
-      <div class="flip-love-front">
+      <div class="emotion-text flip-love-front">
         <p>There’s something I want you to see...Click here❤️</p>
       </div>
 
@@ -1077,6 +1110,9 @@ but real, patient, and still growing.
       Steadily.<br>
       <strong>And with honesty.</strong>
     </p>
+    <div class="name-signature">
+  Neharika <span>♡</span> Sakthivel
+</div>
   </div>
 </section>
 
@@ -1089,11 +1125,9 @@ but real, patient, and still growing.
 <!-- 🌙 Closing -->
 <footer>
   <div class="emotion-text footer-journey">
-    <p>Still you. Still us.</p>
-    <p>Still strong. Still growing.</p>
+    <p>Still you. Still us. Still strong. Still growing.</p>
   </div>
 </footer>
-
 
 
 <script>
@@ -1197,6 +1231,9 @@ setInterval(() => {
   }, 1200);
 
 }, 3000);
+
+
+
 
 </script>
 
