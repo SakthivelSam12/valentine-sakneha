@@ -442,6 +442,37 @@
   transition: box-shadow 0.4s ease;
 }
 
+.footer-journey p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  margin: 6px 0;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: footerFadeUp 1.2s ease forwards;
+}
+
+/* Staggered fade */
+.footer-journey p:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.footer-journey p:nth-child(2) {
+  animation-delay: 1.1s;
+}
+
+.footer-journey p:nth-child(3) {
+  animation-delay: 1.8s;
+}
+
+@keyframes footerFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* ❌ Wrong password shake */
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
@@ -574,6 +605,41 @@
 }
 
 
+/* 🌙 Hero stage base */
+.hero-stage {
+  text-align: center;
+}
+
+/* Each part hidden initially */
+.hero-part {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* Staggered appearance */
+.part-1 {
+  animation-delay: 0.4s;
+}
+
+.part-2 {
+  animation-delay: 1.8s;
+}
+
+.part-3 {
+  animation-delay: 3.6s;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 
 @media (max-width: 480px) {
   .hero-line {
@@ -651,19 +717,30 @@
 
 <!-- ❤️ Hero -->
 <section class="hero">
-  <div class="emotion-text reveal">
-    <h1>For my always, Neha ❤️</h1>
+  <div class="emotion-text hero-stage">
 
-    <p class="hero-line">Three years. One choice.</p>
-    <p class="hero-line">Still you. Still us.</p>
-    <p class="hero-line">Still strong. Still growing.</p>
+    <!-- Part 1: Dedication -->
+    <div class="hero-part part-1">
+      <h1>For my always, Neha ❤️</h1>
+    </div>
 
-    <p class="hero-date">💘14 • 02 • 2026💘</p>
+    <!-- Part 2: Journey -->
+    <!-- <div class="hero-part part-2">
+      <p class="hero-line">Three years. One choice.</p>
+      <p class="hero-line">Still you. Still us.</p>
+      <p class="hero-line">Still strong. Still growing.</p>
+    </div> -->
 
-    <p class="hero-sign ">🌹Happy Valentine’s Day🌹</p>
-    <p class="hero-signature">My love😘❤️</p>
+    <!-- Part 3: Declaration -->
+    <div class="hero-part part-3">
+      <p class="hero-date">💘 14 • 02 • 2026 💘</p>
+      <p class="hero-sign">Happy Valentine’s Day 🌹</p>
+      <p class="hero-signature">My love 😘❤️</p>
+    </div>
+
   </div>
 </section>
+
 
 
 
@@ -882,6 +959,17 @@ but real, patient, and still growing.
 <section id="loveReveal" class="love-section">
   <p id="loveText" class="footer-highlight love-text"></p>
 </section>
+
+
+<!-- 🌙 Closing -->
+<footer>
+  <div class="emotion-text footer-journey">
+    <p>Three years. One choice.</p>
+    <p>Still you. Still us.</p>
+    <p>Still strong. Still growing.</p>
+  </div>
+</footer>
+
 
 
 <script>
