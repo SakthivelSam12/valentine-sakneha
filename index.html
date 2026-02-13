@@ -656,9 +656,8 @@
   transform-style: preserve-3d;
 }
 
-/* Flip on tap or click */
-.flip-love-card:active .flip-love-inner,
-.flip-love-card:hover .flip-love-inner {
+/* Flip when class is added (desktop + mobile) */
+.flip-love-card.flipped .flip-love-inner {
   transform: rotateY(180deg);
 }
 
@@ -745,16 +744,6 @@
     gap: 8px;
   }
 }
-
-
-/* 📱 Mobile tap safety */
-@media (hover: none) {
-  .flip-love-card:hover .flip-love-inner {
-    transform: none;
-  }
-}
-
-
 
 @media (max-width: 480px) {
   .hero-line {
@@ -1213,6 +1202,13 @@ setInterval(() => {
 
 </script>
 
+<script>
+  const flipCard = document.querySelector(".flip-love-card");
+
+  flipCard.addEventListener("click", () => {
+    flipCard.classList.toggle("flipped");
+  });
+</script>
 
 </body>
 </html>
